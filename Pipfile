@@ -11,10 +11,12 @@ pytest = "*"
 pipenv-to-requirements = "*"
 pytest-cov = "*"
 pipenv-setup = "*"
+chardet = "*"
 
 [packages]
 streamlit = "*"
 resc = {editable = true, path = "."}
+numpy = "*"
 
 [requires]
 python_version = "3.7"

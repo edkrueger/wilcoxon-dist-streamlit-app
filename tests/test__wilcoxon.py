@@ -5,7 +5,7 @@ from resc._wilcoxon import (
     wilcoxon_counts,
     wilcoxon_counts_matrix,
     wilcoxon_table,
-)  # pylint: disable=import-error
+)
 
 
 def test_wilcoxon_counts():

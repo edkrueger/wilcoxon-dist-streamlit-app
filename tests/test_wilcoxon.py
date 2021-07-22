@@ -1,7 +1,7 @@
 """
 Tests resc.wilcoxon.
 """
-from resc.wilcoxon import wilcoxon_exact_counts  # pylint: disable=import-error
+from resc.wilcoxon import wilcoxon_exact_counts
 
 
 def test_wilcoxon_exact_counts():

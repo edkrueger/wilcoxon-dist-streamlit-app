@@ -10,7 +10,7 @@ from scipy.stats import norm
 
 @st.cache(hash_funcs={matplotlib.figure.Figure: hash})
 def make_plot(n_observations):
-
+    """Make the plot."""
     exact_counts = np.array(wilcoxon_exact_counts(n_observations))
     exact_distribution = exact_counts / exact_counts.sum()
     max_statistic = exact_counts.size
@@ -29,6 +29,7 @@ def make_plot(n_observations):
 
 
 st.title("Wilcoxon Exact versus Approximate")
+st.header("[Github](https://github.com/edkrueger/wilcoxon-dist-streamlit-app)")
 n_observations = st.slider(
     "Number of Observations", min_value=1, max_value=25, value=1, step=1
 )

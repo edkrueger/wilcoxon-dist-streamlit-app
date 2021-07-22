@@ -1,5 +1,5 @@
 """Wilcoxon Exact and Approximate distributions."""
-# pylint: disable=too-many-lines
+# pylint: disable=too-many-lines, invalid-name
 
 import numpy as np
 
@@ -24,6 +24,14 @@ def wilcoxon_exact_counts(n_observations):
 
 
 def wilcoxon_approximate_mu_sigma(n_observations):
+    """
+    Gives the mean and standard deviation for an approximate Wilcoxon with n_observations.
+
+    Args:
+        n_observations: number of observations.
+    Returns:
+        A tuple of mu, sigma
+    """
     mu = n_observations * (n_observations + 1) / 4
     sigma = np.sqrt(
         n_observations * (n_observations + 1) * (2 * n_observations + 1) / 24

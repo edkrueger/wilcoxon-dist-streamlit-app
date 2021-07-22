@@ -18,3 +18,4 @@ pre-commit
 pylint
 pytest
 pytest-cov
+watchdog

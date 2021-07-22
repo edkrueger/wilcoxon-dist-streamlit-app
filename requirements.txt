@@ -13,4 +13,5 @@
 -e .
 matplotlib
 numpy
+scipy
 streamlit

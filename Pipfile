@@ -19,6 +19,7 @@ streamlit = "*"
 resc = {editable = true, path = "."}
 numpy = "*"
 matplotlib = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.7"

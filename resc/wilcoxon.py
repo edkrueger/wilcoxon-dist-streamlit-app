@@ -1,6 +1,8 @@
 """Wilcoxon Exact and Approximate distributions."""
 # pylint: disable=too-many-lines
 
+import numpy as np
+
 
 def wilcoxon_exact_counts(n_observations):
     """
@@ -19,6 +21,14 @@ def wilcoxon_exact_counts(n_observations):
             "The wilcoxon exact distribution is not implemented for n_observations > 25"
         )
     return distribution
+
+
+def wilcoxon_approximate_mu_sigma(n_observations):
+    mu = n_observations * (n_observations + 1) / 4
+    sigma = np.sqrt(
+        n_observations * (n_observations + 1) * (2 * n_observations + 1) / 24
+    )
+    return mu, sigma
 
 
 # counts were generated with resc._wilcoxon.wilcoxon_table

@@ -23,6 +23,7 @@ python_version = "3.7"
 
 [scripts]
 start = "streamlit run app/app.py"
+test = "pytest --cov-config=.coveragerc --cov=resc"
 
 [pipenv]
 allow_prereleases = true

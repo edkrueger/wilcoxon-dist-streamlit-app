@@ -1,28 +1,4 @@
-"""Wilcoxon Exact and Approximate distributions."""
-# pylint: disable=too-many-lines
-
-
-def wilcoxon_exact_counts(n_observations):
-    """
-    Gives the Wilcoxon exact distribution for n_observations.
-
-    Args:
-        n_observations: number of observations.
-    Returns:
-        A list representing the distribution, where the value for an index is the count.
-    Raises:
-        NotImplementedError: for n_observations > 25.
-    """
-    distribution = COUNTS.get(n_observations)
-    if not distribution:
-        raise NotImplementedError(
-            "The wilcoxon exact distribution is not implemented for n_observations > 25"
-        )
-    return distribution
-
-
-# counts were generated with resc._wilcoxon.wilcoxon_table
-COUNTS = {
+{
     1: [1, 1],
     2: [1, 1, 1, 1],
     3: [1, 1, 1, 2, 1, 1, 1],

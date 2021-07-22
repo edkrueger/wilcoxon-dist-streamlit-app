@@ -1,10 +1,12 @@
 """The App."""
 # pylint: skip-file
 import matplotlib.pyplot as plt
+import matplotlib
 import streamlit as st
 from resc.wilcoxon import wilcoxon_exact_counts
 
 
+@st.cache(hash_funcs={matplotlib.figure.Figure: hash})
 def make_plot(n_observations):
     exact_counts = wilcoxon_exact_counts(n_observations)
     x = list(range(len(exact_counts)))

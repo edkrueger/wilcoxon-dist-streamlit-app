@@ -13,8 +13,8 @@ Alternatively, run `pipenv run start`
 ## Build and Run with Docker
 If you haven't run the hooks, before builtind, run `pipenv run pre-commit run --all-files`  
 To build the container, run `docker build . -t streamlit-app`  
-Run with `docker run -p 80:8080 -e PORT=8080 streamlit-app`  
-Note: This will run the app on port 8080 inside the container and port 80 outside of the container.  
+Run with `docker run -p 80:80 streamlit-app`  
+Note: This will run the app on port 80 inside the container and port 80 outside of the container.  
 _Ignore the urls and ports in the terminal -- those are the ones in the Docker network._  
 To reference it outside of the container, the URL is `http://localhost/`  
 
@@ -34,7 +34,7 @@ Select "Allow HTTP traffic" for a public deployment.
 Click "Create".  
 Click "SSH".  
 Run `export GCR_TAG=<GCR TAG>`  
-Run `docker run -p 80:8080 -e PORT=8080 $GCR_TAG`  
+Run `docker run -p 80:80 $GCR_TAG`  
 
 ### Automatically Deploy to GCE and Start Container (option 2)
 
@@ -85,7 +85,6 @@ az container create \
     --location $REGION \
     --registry-username $ACR_ADMIN_USERNAME \
     --registry-password $ACR_ADMIN_PASSWORD \
-    --environment-variables PORT=80
 ```
 
 

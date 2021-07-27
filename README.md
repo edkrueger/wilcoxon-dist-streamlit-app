@@ -21,6 +21,7 @@ To reference it outside of the container, the URL is `http://localhost/`
 ## Deploy to GCP Compute Engine
 ### Build and Deploy to GCR
 To select you account and project, run `gcloud init`  
+Select a default compute region  
 To get and save your project id, run `export PROJECT=$(gcloud config get-value project)`  
 To get the GCR tag, run `export GCR_TAG=gcr.io/$PROJECT/my-app`  
 To submit the build to GCP Cloud Build, run `gcloud builds submit --tag $GCR_TAG`  

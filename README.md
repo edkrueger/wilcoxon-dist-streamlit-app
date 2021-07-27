@@ -32,9 +32,6 @@ In the options select the checkbox "Deploy a container image to this VM instance
 Paste in the GCR tag in the "Container Image" field.  
 Select "Allow HTTP traffic" for a public deployment.  
 Click "Create".  
-Click "SSH".  
-Run `export GCR_TAG=<GCR TAG>`  
-Run `docker run -p 80:80 $GCR_TAG`  
 
 ### Automatically Deploy to GCE and Start Container (option 2)
 
